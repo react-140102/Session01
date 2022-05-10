@@ -2,11 +2,13 @@
 
 interface MessageProps {
   msg: string;
+  color: string;
 }
 
 export default function Message(props: MessageProps) {
+  console.log(props);
   const style = {
-    color: "red",
+    color: props.color,
   };
   return <h3 style={style}>{props.msg}</h3>;
 }
