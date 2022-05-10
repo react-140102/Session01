@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Counter from "./components/Counter";
 import Message from "./components/Message"; // default export/import
 import TaskList from "./components/TaskList";
@@ -13,6 +14,7 @@ import TaskList from "./components/TaskList";
 
 function App() {
   const title = "Session 01";
+  const [showTasks, setShowTasks] = useState(true);
 
   return (
     <>
@@ -21,7 +23,10 @@ function App() {
       <Message msg="hello word!"></Message>
       <Message msg="goodby donya" color="blue"></Message>
       <Counter></Counter>
-      <TaskList></TaskList>
+
+      <button onClick={() => setShowTasks(!showTasks)}>Toggle Tasks</button>
+      {/* {showTasks ? <TaskList></TaskList> : null} */}
+      {showTasks && <TaskList></TaskList>}
     </>
   );
 }

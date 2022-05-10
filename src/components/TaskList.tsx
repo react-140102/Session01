@@ -17,7 +17,7 @@ export default function () {
   //  const x = 21;
   //expression
   // (x) => x + 2
-  function toggleDown(task: Task) {
+  function toggleDone(task: Task) {
     task.done = !task.done;
 
     //show copy
@@ -25,14 +25,30 @@ export default function () {
     setTaskList([...taskList]);
   }
 
+  function removeTask(task: Task) {
+    setTaskList(taskList.filter((t) => t.id !== task.id));
+  }
+
+  function newTask() {
+    const rnd = Math.random();
+    setTaskList([
+      ...taskList,
+      { id: Math.random(), title: "Anjam kar " + rnd, done: false },
+    ]);
+  }
+
   return (
-    <ul>
-      {taskList.map((task) => (
-        <li key={task.id}>
-          <input type="checkbox" disabled checked={task.done} />
-          <a onClick={() => toggleDown(task)}>{task.title}</a>
-        </li>
-      ))}
-    </ul>
+    <>
+      <button onClick={newTask}>New Task</button>
+      <ul>
+        {taskList.map((task) => (
+          <li key={task.id}>
+            <input type="checkbox" disabled checked={task.done} />
+            <a onClick={() => toggleDone(task)}>{task.title}</a>
+            <button onClick={() => removeTask(task)}>❌</button>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
