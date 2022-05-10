@@ -6,11 +6,13 @@ interface MessageProps {
 }
 
 export default function Message(props: MessageProps) {
-  console.log(props);
+  const color = props.color;
+  const msg = props.msg;
+
   const style = {
-    color: props.color,
+    color: color,
   };
-  return <h3 style={style}>{props.msg}</h3>;
+  return <h3 style={style}>{msg}</h3>;
 }
 
 export function messageFunction(msg: string) {
