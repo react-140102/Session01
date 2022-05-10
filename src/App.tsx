@@ -1,3 +1,4 @@
+import Counter from "./components/Counter";
 import Message from "./components/Message"; // default export/import
 // import {messageFunction} from './components/Message' // import named
 
@@ -18,6 +19,7 @@ function App() {
       {/* {messageFunction("hello word!")} */}
       <Message msg="hello word!"></Message>
       <Message msg="goodby donya" color="blue"></Message>
+      <Counter></Counter>
     </>
   );
 }

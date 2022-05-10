@@ -2,7 +2,7 @@
 
 interface MessageProps {
   msg: string;
-  color?: "red" | "green" | "blue";
+  color?: "red" | "green" | "blue"; // type union
 }
 
 //Destructure
