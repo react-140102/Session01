@@ -17,7 +17,7 @@ function App() {
       <h1>{title}</h1>
       {/* {messageFunction("hello word!")} */}
       <Message msg="hello word!"></Message>
-      <Message msg="goodby donya" color="green"></Message>
+      <Message msg="goodby donya" color="blue"></Message>
     </>
   );
 }
