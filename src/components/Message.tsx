@@ -6,8 +6,11 @@ interface MessageProps {
 }
 
 export default function Message(props: MessageProps) {
-  const color = props.color;
-  const msg = props.msg;
+  // const color = props.color;
+  // const msg = props.msg;
+
+  //Destructure
+  const { color, msg } = props;
 
   const style = {
     color: color,
