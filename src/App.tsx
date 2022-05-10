@@ -1,6 +1,5 @@
-import React from "react";
-import logo from "./logo.svg";
-// import "./App.css";
+import Message from "./components/Message"; // default export/import
+// import {messageFunction} from './components/Message' // import named
 
 //javascript with xml
 //1- class -> className
@@ -20,23 +19,6 @@ function App() {
       <Message msg="salam"></Message>
     </>
   );
-}
-
-//PascalCase
-function Message(props: any) {
-  const style = {
-    color: "red",
-  };
-  // return (<h3 style={{color: 'red'}} >{msg}</h3>)
-  return <h3 style={style}>{props.msg}</h3>;
-}
-
-function messageFunction(msg: string) {
-  const style = {
-    color: "red",
-  };
-  // return (<h3 style={{color: 'red'}} >{msg}</h3>)
-  return <h3 style={style}>{msg}</h3>;
 }
 
 export default App;
