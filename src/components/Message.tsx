@@ -2,11 +2,11 @@
 
 interface MessageProps {
   msg: string;
-  color: string;
+  color?: string;
 }
 
 //Destructure
-export default function Message({ msg, color }: MessageProps) {
+export default function Message({ msg, color = "red" }: MessageProps) {
   // const color = props.color;
   // const msg = props.msg;
 
