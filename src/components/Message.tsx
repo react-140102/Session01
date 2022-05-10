@@ -1,5 +1,10 @@
 //PascalCase
-export default function Message(props: any) {
+
+interface MessageProps {
+  msg: string;
+}
+
+export default function Message(props: MessageProps) {
   const style = {
     color: "red",
   };
@@ -14,4 +19,5 @@ export function messageFunction(msg: string) {
   return <h3 style={style}>{msg}</h3>;
 }
 
+export const PI = 3.141596;
 // export default Message;
