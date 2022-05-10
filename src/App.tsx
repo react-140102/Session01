@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <h1>{title}</h1>
-      {/* {Message("hello word!")} */}
+      {/* {messageFunction("hello word!")} */}
       <Message msg="salam"></Message>
     </>
   );
