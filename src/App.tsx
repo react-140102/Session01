@@ -1,5 +1,6 @@
 import Counter from "./components/Counter";
 import Message from "./components/Message"; // default export/import
+import TaskList from "./components/TaskList";
 // import {messageFunction} from './components/Message' // import named
 
 //javascript with xml
@@ -20,6 +21,7 @@ function App() {
       <Message msg="hello word!"></Message>
       <Message msg="goodby donya" color="blue"></Message>
       <Counter></Counter>
+      <TaskList></TaskList>
     </>
   );
 }
